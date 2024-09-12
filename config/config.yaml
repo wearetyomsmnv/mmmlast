@@ -1,0 +1,36 @@
+interpretability:
+  attention_threshold: 0.5
+  integrated_gradients_threshold: 0.3
+  layer_conductance_threshold: 0.4
+  neuron_conductance_threshold: 0.2
+  saliency_map_threshold: 0.6
+
+architecture:
+  min_layers: 12
+  max_layers: 48
+  min_parameters: 1000000
+  max_parameters: 1000000000
+  min_hidden_size: 768
+  max_hidden_size: 4096
+  min_attention_heads: 12
+  max_attention_heads: 64
+  memory_efficiency_threshold: 0.7
+  computational_efficiency_threshold: 30  # log2 of parameter count
+
+bias:
+  gender_bias_threshold: 0.2
+  racial_bias_threshold: 0.2
+  religious_bias_threshold: 0.2
+  age_bias_threshold: 0.2
+  socioeconomic_bias_threshold: 0.2
+  political_bias_threshold: 0.2
+
+tokenomics:
+  prompts:
+    - "Hello"                # Short prompt
+    - "Hello "               # Medium prompt (will be multiplied)
+    - "Hello "               # Long prompt (will be multiplied)
+  injection_tests:
+    - []                     # No injection
+    - ["<|endoftext|>"]      # Special token injection
+    - ["<pad>"]              # Padding token injection

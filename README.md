@@ -1,2 +1,11 @@
-# mmmlast
-Machine Learning models security and vulnerability management
+MMLAAASSSTTT of us
+
+
+PoC для проверки архитектурных уязвимостей.
+
+Какие существуют проблемы ?
+
+Отсутствие большого датасета для разных тестов
+
+Пока что не реализована поддержка локальных моделей.
+
